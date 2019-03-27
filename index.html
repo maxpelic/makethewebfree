@@ -5,33 +5,7 @@
 
 	
 <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
-<amp-analytics type="googleanalytics">
-<script type="application/json">
-{
-  "vars": {
-    "account": "UA-137075025-1"
-  },
-  "triggers": {
-    "default pageview": {
-      "on": "visible",
-      "request": "pageview",
-      "vars": {
-        "title": "Home Page"
-      }
-    }
-  },
-    "click on #signup trigger": {
-      "on": "click",
-      "selector": "#signup",
-      "request": "event",
-      "vars": {
-        "eventCategory": "subscribe",
-        "eventAction": "subscribe-clicked"
-      }
-    }
-}
-</script>
-</amp-analytics>
+
 	<script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script><script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
 	
 	<link rel="canonical" href="https://makethewebfree.com">
@@ -99,6 +73,33 @@
 </head>
 
 <body>
+	<amp-analytics type="googleanalytics">
+<script type="application/json">
+{
+  "vars": {
+    "account": "UA-137075025-1"
+  },
+  "triggers": {
+    "default pageview": {
+      "on": "visible",
+      "request": "pageview",
+      "vars": {
+        "title": "Home Page"
+      }
+    }
+  },
+    "click on #signup trigger": {
+      "on": "click",
+      "selector": "#signup",
+      "request": "event",
+      "vars": {
+        "eventCategory": "subscribe",
+        "eventAction": "subscribe-clicked"
+      }
+    }
+}
+</script>
+</amp-analytics>
 	<main>
 		<header>
 			<svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 180 112"><title>mtwf logo</title><circle class="cls-1" cx="90" cy="54.5" r="55"/><path d="M180,83.55v7c0,9.27-3.52,13.3-14.26,13.3-6.84,0-9.77-1-15.82-1-3.32,0-6.84,2.22-7,8.66h-9.76c-.2-6.44-3.72-8.66-7-8.66-6,0-9,1-15.82,1-10.74,0-14.26-4-14.26-13.3v-7h8.79v1.61c0,3.73,1,4.84,6.06,4.84s9.57-.4,15.23-.4c7.82,0,10.55,2.72,11.72,8.05h.39c1.18-5.33,3.91-8.05,11.73-8.05,5.66,0,10.25.4,15.23.4s6.06-1.11,6.06-4.84V83.55Z"/><path d="M57,77.55v4.79c0,6.28-2.39,9-9.68,9-4.64,0-6.62-.68-10.73-.68-2.26,0-4.64,1.5-4.78,5.87H25.19c-.14-4.37-2.52-5.87-4.78-5.87-4.11,0-6.09.68-10.73.68-7.29,0-9.68-2.74-9.68-9V77.55H6v1.1c0,2.53.67,3.28,4.11,3.28s6.5-.28,10.34-.28c5.31,0,7.16,1.85,8,5.47h.26c.8-3.62,2.65-5.47,8-5.47,3.84,0,7,.28,10.34.28s4.1-.75,4.1-3.28v-1.1Z"/><path d="M80,99.55v2.77c0,3.64-1.38,5.23-5.6,5.23-2.69,0-3.84-.4-6.22-.4-1.3,0-2.68.87-2.76,3.4H61.58c-.08-2.53-1.46-3.4-2.76-3.4-2.38,0-3.53.4-6.22.4-4.22,0-5.6-1.59-5.6-5.23V99.55h3.45v.64c0,1.46.39,1.9,2.38,1.9s3.76-.16,6-.16c3.07,0,4.14,1.07,4.6,3.16h.16c.46-2.09,1.53-3.16,4.6-3.16,2.23,0,4,.16,6,.16s2.38-.44,2.38-1.9v-.64Z"/></svg>
