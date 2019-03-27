@@ -2,6 +2,9 @@
 <html amp>
 <head>
 <meta charset="utf-8"><script src="https://cdn.ampproject.org/v0.js" async></script><script async custom-element="amp-install-serviceworker" src="https://cdn.ampproject.org/v0/amp-install-serviceworker-0.1.js"></script><link rel="stylesheet" href="https://use.typekit.net/ksz0kmu.css"><style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript><meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+	
+	<script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script><script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
+	
 	<link rel="canonical" href="https://makethewebfree.com">
 	<title>make the web free</title>
 	<meta name="Description" content="a little web project to provide free developent resources to creators">
@@ -33,6 +36,36 @@
 		svg circle{
 			fill:yellow;
 		}
+		form input{
+			padding:5px 10px;
+			font-size: 15px;
+			border:none;
+			box-sizing: border-box;
+		}
+		form input[type=email]{
+			width:calc(100% - 102px);
+			max-width:200px;
+			background:white;
+			border:none;
+			border-radius: 10px 0 0 10px;
+			margin-right:2px;
+		}
+		form input[type=submit]{
+			width:100px;
+			text-align: center;
+			max-width:100px;
+			border-radius: 0 10px 10px 0;
+			background:yellow;
+		}
+		section{
+			border:1px solid currentColor;
+			border-radius: 5px;
+			padding:30px;
+			margin-top:60px;
+		}
+		section h2{
+			margin-top:0;
+		}
 	</style>
 </head>
 
@@ -44,26 +77,46 @@
 		<article>
 			<h1>make the web free</h1>
 			<p>
-				"make the web free" will provide free plugins and services to web developers.
+				Yeah, browsing the web is free (assuming you have an internet connection). But shouldn't developing for it be free as well?
+				Let's give everyone the ability to create amazing websites without paying a cent.
 			</p>
 			<p>
-				we believe web development and regulation compliance shouldn't require subscriptions or large payments, as that type of stuff isn't fun
+				Our plan is to create a library of free resources available to anyone who wants them - no strings attached. Yeah, people can pay us if they want to support an awesome library, but they won't get anny special benefits from doing so (other than knowing the contributed to an amazing set of resources)
 			</p>
 			<p>
-				our first projects include free ip address lookup and developing this site
+				Some project ideas we have so far: IP address location lookup (used to check compliance with local laws), finishing development of this site (obviously), and a free privacy policy generator moderated by the community.
 			</p>
 			<p>
-				if you'd like to request a product, email <a href="mailto:request@makethewebfree.com">request@makethewebfree.com</a>
+				How can you show you're support? Right now we're in the concept/development phase of this, but if you're intrested in getting involved, we'd love to hear from you. You can email <a href="mailto:connect@makethewebfree.com">connect@makethewebfree.com</a> with any thoughts, requests, or ideas you have.
 			</p>
 			<p>
-				interested in getting involved? email <a href="mailto:develop@makethewebfree.com">develop@makethewebfree.com</a>
+				Thanks,
 			</p>
 			<p>
-				thanks,
+				- MTWF team, March 27th, 2019
 			</p>
-			<p>
-				- MTWF team
-			</p>
+			<section>
+				<h2>Stay in the loop</h2>
+				<p>
+					Enter you're email and we'll let you know when something happens:
+				</p>
+				<form method="post"	action-xhr="https://dynamic-content.000webhostapp.com/email-submit.php" target="_top">
+					<input type="email" name="email" placeholder="Email..." required><input type="submit" value="Sign me up">
+					<div submit-success>
+						<template type="amp-mustache">
+							Success! We'll let you know when we do something
+						</template>
+					</div>
+					<div submit-error>
+						<template type="amp-mustache">
+							I guess there was an error - can you try again later?
+						</template>
+					</div>
+				</form>
+				<p>
+					We won't share your email with anyone, we'll only use it to keep you informed (once something happens)
+				</p>
+			</section>
 		</article>
 	</main>
 	
