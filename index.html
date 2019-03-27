@@ -88,9 +88,9 @@
       }
     }
   },
-    "click on #signup trigger": {
-      "on": "click",
-      "selector": "#signup",
+    "submit on #subscribe trigger": {
+      "on": "submit-success",
+      "selector": "#subscribe",
       "request": "event",
       "vars": {
         "eventCategory": "subscribe",
@@ -130,8 +130,8 @@
 				<p>
 					Enter you're email and we'll let you know when something happens:
 				</p>
-				<form method="post"	action-xhr="https://dynamic-content.000webhostapp.com/email-submit.php" target="_top">
-					<input type="email" name="email" placeholder="Email..." required><input id="signup" type="submit" value="Sign me up">
+				<form id="subscribe" method="post" action-xhr="https://dynamic.makethewebfree.com/email-submit.php" target="_top">
+					<input type="email" name="email" placeholder="Email..." required><input type="submit" value="Sign me up">
 					<div submit-success>
 						<template type="amp-mustache">
 							Success! We'll let you know when we do something
