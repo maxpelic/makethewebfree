@@ -2,7 +2,36 @@
 <html amp>
 <head>
 <meta charset="utf-8"><script src="https://cdn.ampproject.org/v0.js" async></script><script async custom-element="amp-install-serviceworker" src="https://cdn.ampproject.org/v0/amp-install-serviceworker-0.1.js"></script><link rel="stylesheet" href="https://use.typekit.net/ksz0kmu.css"><style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript><meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
 	
+<script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+<amp-analytics type="googleanalytics">
+<script type="application/json">
+{
+  "vars": {
+    "account": "UA-137075025-1"
+  },
+  "triggers": {
+    "default pageview": {
+      "on": "visible",
+      "request": "pageview",
+      "vars": {
+        "title": "Home Page"
+      }
+    }
+  },
+    "click on #signup trigger": {
+      "on": "click",
+      "selector": "#signup",
+      "request": "event",
+      "vars": {
+        "eventCategory": "subscribe",
+        "eventAction": "subscribe-clicked"
+      }
+    }
+}
+</script>
+</amp-analytics>
 	<script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script><script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
 	
 	<link rel="canonical" href="https://makethewebfree.com">
@@ -101,7 +130,7 @@
 					Enter you're email and we'll let you know when something happens:
 				</p>
 				<form method="post"	action-xhr="https://dynamic-content.000webhostapp.com/email-submit.php" target="_top">
-					<input type="email" name="email" placeholder="Email..." required><input type="submit" value="Sign me up">
+					<input type="email" name="email" placeholder="Email..." required><input id="signup" type="submit" value="Sign me up">
 					<div submit-success>
 						<template type="amp-mustache">
 							Success! We'll let you know when we do something
@@ -118,7 +147,9 @@
 				</p>
 			</section>
 		</article>
+		<p>
+			<a href="privacy.html">Privacy policy</a>
+		</p>
 	</main>
-	
 </body>
 </html>
